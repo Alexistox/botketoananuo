@@ -140,9 +140,6 @@ const handlePlusCommand = async (bot, msg) => {
     });
     
     await transaction.save();
-       
-    // Xóa toàn bộ thẻ thuộc nhóm hiện tại
-    await Card.deleteMany({ chatId: msg.chat.id.toString() });
     
     // Nếu có mã thẻ, cập nhật hoặc tạo thẻ mới
     if (cardCode) {
